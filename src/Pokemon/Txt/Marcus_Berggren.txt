@@ -1,0 +1,21 @@
+My colleague Oleksandr took on task 4 and subsequently task 8. We had decided
+early on that we would need ‘Type’ as a separate class file along with an enum file
+‘PokemonType’. This enum file encapsulates the various Pokémon types as constants.
+Each type, WATER, FIRE, GRASS, NORMAL, as constants are inherently immutable,
+which means that once they are defined, their values will remain and cannot be
+accidentally modified. The ’Type’ class, on the other hand, utilizes an encapsulated
+instance of the ‘PokemonType’ enum as its attribute and a constructor to initialize it. The
+method ‘calculateDamage’ is the focal point of this class, it uses nested switch-
+cases to calculate a damage multiplier with the return type as a double of three possible 
+outcomes: 0.5, 1.0 or 2.0. The outer switch-case is responsible for handling the
+attacking Pokémons type as its controlling expression. Each case in the outer switch
+corresponds to a different attacking type. The inner switch-case is responsible for
+determining the damage multiplier based on the defending Pokémons type.
+
+When task 8 was introduced Oleksandr did basically only have to add ICE , BUG,
+DRAGON, ELECTRIC in ‘PokemonType’ and add 4 additional switch cases. Danyl and I
+did not have to change our classes, and we mainly refactored the order in the ‘Type’ file,
+incorporated ‘return switch’ (for readability) and performed checks to determine if
+multipliers were working properly. This was the result of good design choice by
+Oleksandr to use switch-case structure in task 4, that made for clear and organized way
+to handle different type interaction.
